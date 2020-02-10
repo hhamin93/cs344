@@ -1,0 +1,55 @@
+Exercise 1.1
+
+b 
+    i. it is implemented as a function.
+    ii. They are all lists. However, operator list should contain keys and values.
+    iii. In a bigger sense, I think that it is a recursion.
+         The function does not call itself, gps, but its subfunctions work in a chain that 
+         eventually calls themselves again, the achieve_all function.
+         The chain is linked in a manner of 
+         A-B-C-D-B- ... -D
+D
+   I. Monkey and banana. Except that the program uses ball instead of the stick, yes, 
+    it does faithfully implement the puzzle. The problem used given initial states and operations to arrive at condition - 
+    not hungry. However, I wonder if it really is a intelligent program and real GPS when the operators and starting positions have to be so detailed. 
+    It is like giving manual on how to install git.
+   ii. The GPS solves a problem by first, looking at what is needed to be solved and work its way backwards.
+       it does not start at a starting place. But starts at the goal: not hungry and works its way backwards through the chain of operations
+       which added the action needed. for an example, action eat bananas was added by action grasp bananas.
+       It works back in the chain until it finds an action that can be done with the current preconds. 
+       It moves back recursively constantly updating its preconds and try to solve the problem with given actions.
+       Once a basecase preconds and action is achieved, the recursion moves back in a series of actions that will end in the goal: eat banana.
+    iii. So far we have learnt that there are four kinds of A.I: one that acts like human, one that thinks like human, one that act rationally, and one that thinks rationally.
+         I beilieve that GPS falls into the category of the one that acts like human, though very superficial. I would say that it does not act like a human but rather, 
+         act like how its programmer designed it to act. 
+    iv. I do think that when a monkey displays a problem solving skills, which it has, it shows the proof of its intelligence. It shows investigation, making hypothesis, 
+        using experience as a tool, and so on. 
+
+
+
+Trace output
+DEBUG:root:  Achieving: not hungry
+DEBUG:root:  Consider: eat bananas
+DEBUG:root:    Achieving: has bananas
+DEBUG:root:    Consider: grasp bananas
+DEBUG:root:      Achieving: at bananas
+DEBUG:root:      Consider: climb on chair
+DEBUG:root:        Achieving: chair at middle room
+DEBUG:root:        Consider: push chair from door to middle room
+DEBUG:root:          Achieving: chair at door
+DEBUG:root:          Achieving: at door
+DEBUG:root:        Action: push chair from door to middle room
+DEBUG:root:        Achieving: at middle rooms
+DEBUG:root:        Achieving: on floor
+DEBUG:root:      Action: climb on chair
+DEBUG:root:      Achieving: empty handed
+DEBUG:root:      Consider: drop ball
+DEBUG:root:        Achieving: has ball
+DEBUG:root:      Action: drop ball
+DEBUG:root:    Action: grasp bananas
+DEBUG:root:  Action: eat bananas
+Executing push chair from door to middle room
+Executing climb on chair
+Executing drop ball
+Executing grasp bananas
+Executing eat bananas
