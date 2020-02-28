@@ -1,0 +1,38 @@
+2.1 
+    a. Both of the local search algorithms solves the problem and they are both produced the answer in all twenty 
+        tests I ran.
+    b. 
+    c. Where x start will not affect the results of the hill-climbing algorithm because the function abs constantly gets
+        bigger with not fluctuations, and when it gets to the peak, it will go down constantly. As hill-climber 
+        only looks a step forward, when it sees the peak, it will stop. 
+
+        similar affects will be on simulated anealy 
+
+    d. Makinge the delta larger than one will not affect the execution time, but only its accuracy to solution. Making the delta smaller than one
+        should not affect Simulated Annealing but slow hill climbing. For both cases, the solution will be off from the real answer as large as 
+        delta, or as small as it is.
+        
+    e. It is one possible schedule for annealing.
+2.2
+    a. For this problems, because the delta is not big enough and the slope of the peaks are very low, and because there are valleys between the slopes, 
+       both of the approaches will not perform too well as Hill climbinb will get stuck in a valley and simulated Annealing will not make to other peak 
+       due to small delta.
+    
+    b. The starting values matter as they determines the peaks.
+    c. Changing the delta will not affect the climbers as it will only go to its nearest peak. Delta will affect S.A. as it will determine whether it 
+       could go to other peaks or not.
+    d. The minimum value will be 0 and the maximum value will have no limit.
+
+2.3
+    a. Random restarts made hill climbing ok as the worse and better evened out on the average given enough restarts. S.A. did well as it is less influenced
+       by where it starts as it tries to jump to random places where delta allows.
+
+    b. For the Hill climbers, the average value was always around 15. I think this is because of the averaging out of the good and bad scores, right in the middle.
+    The S.I. was around 20 with delta 1. As we predicted, S.I. did much better job when there were multiple peaks. With different delta, the results might be better or similar to 
+    the hill climbers, but not worse.
+    c. S.I. performed a much better solutions as it was able to jump across the valleys and try things out and return to best solutions.
+2.4
+    a. As S.I. jumps around, I think beam search would make the most sense.
+    b. I think you could hold up to 50.
+    c. I would check if we have reached a solution with hill search for every node and stop if we hit the solution. this is different from random restarts as
+       we are checking to see if we are getting closer to solution.
