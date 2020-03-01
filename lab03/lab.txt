@@ -1,0 +1,37 @@
+lab
+3.1.
+	a.
+	DFS and min_conflicts failed for all three sudokus.
+	Easy:
+		AC3: solves quickly.
+		Backtraching: solves slowly.
+
+	harder:
+		AC3: fails.
+		Backtraching: solves slowly.
+
+	hardest:
+		AC3: fails after a while.
+		Backtraching: solves very slowly.
+
+	With increase in the number of constraints, more numbers on the bord, Sudoku gets harder. the easy sudoku has small enough constraints and paths that AC3 is able to find solution, but once the contraints increase, it starts to fail to find the solution. As DFS and min_conflicts have no backtracking, if they do not find the solution in the first attempt, they will fail to find the solution. It is possible for them to find the solution but very very unlikely. Backtracking method however will find the solution as it uses DFS and uses inference to select the paths to follow. 
+
+	b.
+	With mrv, backtracking solves the problem much faster than the default version. With forward_checking, backtracking solves the problem much faster than the default version. With both of them enabled, I think there is some increase in performance, but not a noticable increase. I think that to use both forward checking and mrv is best.
+
+3.2
+	a. min_conflicts: n can grow very large up to practically 10,000 or more befrore the program will no longer be effective. It is because it is very easy to find min_conflicting next step of the queens problem. The resulting solution may not be a global solution but it will be a local one. Because the algorithm is so simple and does not worry about finding the global solution it is able to have big n. 
+		AC3 will fail for any size of N as it requires big number of constraints before it is able to run. In queens problem, it will have fewer constraints and bigger search size and the algorithm will fail to proceed as it will eliminate all of its options.
+	Backtraking works "efficiently" until N gets to 400 with  mrv and forward_checking enabled. With growth of N by one, the size of search space for backtracking increases dramatically, and in this problem the maximun number happens to be around 400.
+
+	b. Forward_checking and mrv enabled is the best because forward_checking will reduce the search size and mrv will look for positions with more constrained positions.
+
+	c. Min conflicts will take about 10*N steps as it first have to place all the queens by greedy algorithm and then take about 9*10 steps to resolve conflicts between the queens. The relationship, bigO is still linear here. 
+
+	3.3
+	a. 
+	Presence of Goal_State: I think one of the major difference between the CSP and traditional is the presence of the Goal_state. Both algorithms have to have initial states and actions to begin with but the goal state in traditional search can have different forms in CSP. For an example, in the queens problem, the goal state for the traditional is value of 0 or the maximum value. However, for CSP, the solution that CSP gives can come in different forms. 
+	Possibilities: One more difference I found between them is the existance of possibilities. I found that CSP uses constraints as a major driving factor to find solution and go back sometimes.
+	Backtracking: Backtracking is in the core of CSP and I think that is the major difference between them. When CSP algorithm fails to satisfy its constraints it is able to go back to the state it was before and try different paths. 
+
+	b. I think the main difference in the heuristics in bewteen the two is one how they approach the problem. the traditional approach looks at clearly defined goal state and tries to get close to the state step by step. However, CSP is looking at constraints and trying to move somewhere where it has less and less constraints. Because of this, CSP often has more generous goal test. 
