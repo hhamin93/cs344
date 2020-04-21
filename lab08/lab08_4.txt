@@ -1,0 +1,16 @@
+1. What good did the K-fold validation do in this exercise?
+
+K-fold allowed us to validate data relatively reliably with relatively small data pool.
+
+2. Chollet claims that it would be problematic to use data values with “wildly different ranges”. Why is this?
+
+because it will cause values with bigger values to have more impact when it really does not have more information than the smaller values.
+It does not predict better than the smaller values.
+
+3. Chollet also claims that smaller datasets “prefer” smaller networks. Do you agree? Explain your answer.
+
+I agree as larger networks trained on smaller datasets will be so specialized that they will not be able to fit other sets of data.
+
+4. Try networks with one more and one less hidden layer, and wider or narrower layers.
+
+   

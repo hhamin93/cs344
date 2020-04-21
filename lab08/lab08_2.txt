@@ -1,0 +1,35 @@
+1. 
+
+The pearson correlation coefficient shows the closeness of the two factors in ratio. It shows how predictive one factor can be to another.
+one example could be from excercise 1, between rooms and bedrooms, (0.9), a very strong correlation. Which makes sense as more room there will be, more bedrooms.
+
+2. 
+
+Task 1:
+
+minimal_features = ["median_income","rooms_per_person",]
+learning_rate=0.05, steps=500, batch_size=600
+RMSE = 84.33
+
+Task 2:
+
+training_examples["In_SF_or_LA"] = training_examples["latitude"].apply(
+    lambda l: 1.0 if (33 <= l <=35) or  (37 <= l <= 39) else 0.0)
+validation_examples["In_SF_or_LA"] = validation_examples["latitude"].apply(
+    lambda l: 1.0 if (33 <= l <=35) or  (37 <= l <= 39) else 0.0)
+synthetic_features = ["median_income","In_SF_or_LA",
+]
+synthetic_training_examples = training_examples[synthetic_features]
+synthetic_validation_examples = validation_examples[synthetic_features]
+_ = train_model(
+    learning_rate=0.03,
+    steps=500,
+    batch_size=5,
+    training_examples=synthetic_training_examples,
+    training_targets=training_targets,
+    validation_examples=synthetic_validation_examples,
+    validation_targets=validation_targets)
+
+RMSE:83.84
+
+Both beat the baseline
