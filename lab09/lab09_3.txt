@@ -1,0 +1,3 @@
+a. Try Chollet’s “Further experiments”. Do any of the alternatives do better than the suggested architecture? Why or why not?
+
+I did not see much difference in the alternatives. I may have been not configuring things in the correct way.
