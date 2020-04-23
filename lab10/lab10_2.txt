@@ -1,0 +1,19 @@
+1. What does AdaGrad do to boost performance?
+
+    It modifies learning rate for each coefficient to alter and lower the rate as the model learns.
+
+2. Tasks 1–3: Report your best hyperparameter settings and their resulting performance.
+
+Task 1:
+
+(learning_rate=0.007),steps=4000,batch_size=70,hidden_units=[10, 10]
+Final RMSE (on validation data): 80.66
+
+Task 2:
+Using ADAM
+(learning_rate=0.05),steps=1000,batch_size=50,hidden_units=[10, 10]
+Final RMSE (on validation data): 63.17
+
+Task 3:
+(learning_rate=0.08),steps=40,batch_size=70,hidden_units=[10, 10]
+Final RMSE (on validation data): 67.21

@@ -1,0 +1,12 @@
+Exercise 1:
+
+1. What’s the size/shape of the cats/dogs datasets?
+This dataset:  1000 dogs 1000 cats 
+150x150 images.
+
+2. How does the first CNN compare with the one we did in class.
+
+
+
+3. Can you see any interesting patterns in the intermediate representations?
+
