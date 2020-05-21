@@ -1,0 +1,7 @@
+1.
+Categorical is descriptive data while numerical data is purely numerical.
+
+2.
+Task1: train_model(learning_rate=0.00002,steps=500,batch_size=5)  RMSE = 168.53
+Task2: train_model(learning_rate=.00002,steps=1000,batch_size=5,input_feature="population") RMSE = 176.2
+

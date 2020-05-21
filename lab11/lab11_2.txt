@@ -1,0 +1,9 @@
+Task #1 
+The disparity in numbers of males and females could lead to bias.
+
+Task #2  
+There was bias in the high income in the race.
+One huge bias is that thie dataset does not include those ones who do not work, unemployed.
+
+Task #4 
+The dataset shows high expectations on races other than white not being able to earn high income. 

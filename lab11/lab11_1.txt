@@ -1,0 +1,12 @@
+Task 1: 
+
+A Linear model is sometimes faster and easier than neural network for linear problems.
+
+Task 2:
+NN shows varying performance but it tends do better. 
+
+Task 3: 
+They do not do significantly better.
+
+Tasks 4–5:
+Happy and joy are close together, and I think this is because their contexts are very similar.

@@ -1,0 +1,29 @@
+a.
+Task1:
+california_housing_dataframe["rooms_per_person"]
+ = (california_housing_dataframe["total_rooms"] / california_housing_dataframe["population"])
+calibration_data = train_model(
+    learning_rate=0.055,
+    steps=500,
+    batch_size=5,
+    input_feature="rooms_per_person"
+)
+
+
+Task2:
+plt.figure(figsize=(10,5))
+plt.subplot(1, 2, 2)
+plt.scatter(calibration_data["predictions"], calibration_data["targets"])
+
+Task3:
+
+california_housing_dataframe["rooms_per_person"]
+= california_housing_dataframe["rooms_per_person"].apply(lambda x: min(x, 4))
+calibration_data = train_model(
+    learning_rate=0.05,
+    steps=400,
+    batch_size=20,
+    input_feature="rooms_per_person")
+
+b. Synthetic features allow two features to be combind to one.
+c. Outliers are the unusual cases that are vary a lot in the dataset.

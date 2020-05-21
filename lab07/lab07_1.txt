@@ -1,0 +1,14 @@
+a.
+exercise 1:
+cities['Saint_And_Over_50miles']
+ = cities['City name'].apply(lambda name: name.startswith("San")) & cities['Area square miles'].apply(lambda size:size > 50)
+
+exercise 2:
+cities.reindex([2,0,1,5])
+
+
+b.
+numpy is good for scientific computing when panda is good for making series.
+
+c.
+shuffling order in training data will prevent bias.

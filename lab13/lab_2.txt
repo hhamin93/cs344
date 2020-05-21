@@ -1,0 +1,31 @@
+FOL facts:
+
+    on(a,b)
+
+    on(b,c)
+
+    supporting(table,c)
+
+    ∀X,Y supporting(X,Y) → on(Y,X)
+
+    ∀X,Y on(X,Y) → above(X,Y)
+
+    ∀X,Y,Z above(X,Y)∧above(Y,Z) → above(X,Z)
+
+    Prove: above(a,table)
+
+
+convert all implies to cnf:
+
+    on(a,b)
+
+    on(b,c)
+
+    supporting(table,c)
+
+    ¬supporting(X,Y) V on(Y,X)
+
+    ¬on(X,Y) V above(X,Y)
+    
+    ¬above(X,Y) ∨ ¬above(Y,Z) V above(X,Z)
+
